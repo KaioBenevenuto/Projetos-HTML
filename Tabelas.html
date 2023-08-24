@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+        <table></table>
+        
+        Prós
+        - Visualização de dados via linhas e colunas.
+        - Boa acessibilidade para leitura dos dados 
+        
+        Contras
+        - Pouco flexível
+        - Precisa de estilização para melhor visualização 
+        
+        Não usar
+    - Para criar seu layout
+    -->
+
+    <!--
+    Para fazer uma tabela básica, apenas precisaremos da tag <table></table>, dentro dela iremos usar a 
+    tag <tr></tr>(table row) para criar uma linha na tabela, e dentro dela usaremos a tag <th></th>(table header) 
+    para o cabeçalho.
+    Depois faremos o tr novamente, só que agora não sendo o cabeçalho, e sim o td(table description).
+    -->
+    <h2 style="color:cornflowerblue;">Tabela básica:</h2>
+    <table style="color:cornflowerblue;">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Kaio</td>
+            <td>19</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Gustavo</td>
+            <td>25</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Bella</td>
+            <td>14</td>
+        </tr>
+    </table>
+    <!--
+    Organizando tabelas
+    
+    - Para organizar a tabela é preciso colocar o cabeçario dentro da tag <thead></thead> e as descrições dentro
+    da tag <tbody></tbody>;
+    
+    - Para descrever o que a tabela trata, usamos a tag <caption></caption>;
+    
+    - Também podemos usar a tag <tfoot></tfoot> para servir como um rodapé, e por exemplo colocarmos o total 
+    de pessoas. 
+    -->
+    <h2 style="color:tomato;">Tabela organizada:</h2>
+    <table style="color:tomato;">
+
+        <caption>Pessoas por idade</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Kaio</td>
+                <td>19</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Gustavo</td>
+                <td>25</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Bella</td>
+                <td>14</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Total:</td>
+                <td>3 pessoas</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!--
+    Tabela complexa
+    
+    Estaremos criando uma tabela bem mais complexa, com alguns atributos a mais e uma acessibilidade 
+    a mais. 
+    
+    Faremos uma tabela que contém 2 lojas, onde estaremos vendo quantos 
+    produtos foram vendidos e produzidos, e agruparemos pelo nome dos produtos.
+    -->
+    <h2 style="color:rgb(124, 205, 92)">Tabela complexa:</h2>
+    <table style="color:rgb(124, 205, 92)">
+
+        <caption>Produzidos x Vendidos por Loja</caption>
+
+        <!-- Podemos usar o <colgroup></colgroup> para melhorar o aspecto da tabela -->
+        <colgroup>
+            <!--
+            O colspan não funciona dentro do <col>, no lugar usamos o span
+        -->
+            <col>
+            <col span="2" style="background-color:rgba(255, 0, 0, 0.945)">
+            <col span="2" style="background-color:rgb(3, 79, 219);">
+        </colgroup>
+
+        <!-- Uma <thead></thead> complexa: -->
+        <thead>
+            <tr>
+                <!-- 
+                rowspan="2" -> faz com que a coluna ocupe 2 linhas
+                colspan="2" -> faz com que a coluna ocupe 2 colunas
+                -->
+                <th rowspan="2"></th>
+                <th colspan="2" scope="colgroup">Afonso Pena</th>
+                <th colspan="2" scope="colgroup">Antônia Pereira</th>
+            </tr>
+            <tr>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+            </tr>
+        </thead>
+
+        <!-- Um <tbody></tbody> complexo: -->
+        <tbody>
+            <tr>
+                <th scope="row">Vassouras</th>
+                <td>50</td>
+                <td>30</td>
+                <td>20</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <th scope="row">Baldes</th>
+                <td>10</td>
+                <td>10</td>
+                <td>30</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--
+    Para melhorarmos a acessibilidade usamos o scope, para informar o que são as linhas, colunas
+    e agrupamento de colunas.
+    
+    - scope="colgroup": para grupos de colunas
+    - scope="col": para colunas
+    - scope="row": para linhas
+    -->
+</body>
+
+</html>
