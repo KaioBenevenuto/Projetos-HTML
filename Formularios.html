@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <!---------------------------------------------------------------------------------------------
+    Formulários
+    
+    Para que serve?
+    - Capturar dados de entrada(input)
+    - Interação
+    - Controle
+    
+    Pré requisitos:
+    - Básico de HTML
+    
+    Dominar:
+    - Estilização
+    - Validação
+    - Controles customizados
+    - Javascript
+
+    ---------------------------------------------------------------------------------------------
+    
+    <form>
+        
+    - Elemento que definirá um formulário
+    - É um container estilo <section> e <footer>
+
+    Atributos básicos:
+    - action
+    - method
+
+    Tag: 
+    <form action="" method="">
+        Conteúdo...
+    </form>
+
+    ---------------------------------------------------------------------------------------------
+
+    <fieldset>
+
+    - Agrupamento de campos com mesmo propósito
+    - Semântico
+    - Acessibilidade
+
+    Atributos especiais:
+    - disabled
+        - desabilita todos os elementos internos
+        - não serão enviados ao submeter o formulário
+    - form
+        - o id de um formulário ao qual esse fieldset pertence
+        - não precisa estar dentro do formulário
+    - name
+        - nome do grupo
+    
+    <legend>
+        - nome do agrupamento
+        - primeiro elemento dentro do fieldset
+    
+    --------------------------------------------------------------------------------------------->
+    
+    <form action="" id="contact">
+    
+    </form>
+    
+
+    <fieldset form="contact" name="input-contact" >
+        <legend>Contato</legend>
+    </fieldset>
+
+    <!---------------------------------------------------------------------------------------------
+
+    <label>
+    
+    - Associar ou identificar uma (ou mais) tag de entrada de dados
+    - Acessibilidade
+    - Você poderá clicar para mudar o foco da entrada de dados
+
+    Atributos:
+    - for
+        - para fazer conexão entre este label e a tag de entrada de dados 
+        - é feita via id do input
+        - só funciona com elementos específicos
+            - buttom, input (que não está com o atributo hidden - ocultado), meter, output, progress, select, textarea 
+
+    --------------------------------------------------------------------------------------------->
+    <br>
+    
+    <label for="nome">Nome do usuário:</label>
+    <input type="text" id="nome">
+
+</body>
+
+</html>

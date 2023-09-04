@@ -16,7 +16,7 @@
 <body>
     <h1>Áudio e vídeo</h1>
 
-    <h2><code>&ltVídeo&gt</code></h2>
+    <h2><code>&ltVideo&gt</code></h2>
     <ul>
         <li><code>src</code> → É usado para colocar o link do vídeo</li><br>
 
@@ -72,13 +72,13 @@
     </dl>
 
     <video controls width="920" height="430" preloads="auto" loop muted>
-        <source src="./Vídeos-Imagens-Áudios/vídeo0.mp4" type="video/mp4">
-        <p>Esse browser não suporta o vídeo, baixe o </p>
-        <a href="./Vídeos-Imagens-Áudios/vídeo0.mp4" download="">aqui</a>
+        <source src="./Videos-Imagens-Audios/vídeo0.mp4" type="video/mp4">
+        <p>Esse browser não suporta o vídeo, veja o por </p>
+        <a href="./Videos-Imagens-Audios/video0.mp4" download="">aqui</a>
     </video>
 
     <!---------------------------------------------------------------------------------->
-    <h2><code>&ltÁudio&gt</code></h2>
+    <h2><code>&ltAudio&gt</code></h2>
     <ul>
         <li><code>src</code></li><br>
 
@@ -123,7 +123,7 @@
     </dl>
 
     <audio controls muted loop>
-        <source src="./Vídeos-Imagens-Áudios/áudio0.mp3" type="audio/mp3">
+        <source src="./Videos-Imagens-Audios/áudio0.mp3" type="audio/mp3">
     </audio>
     <!---------------------------------------------------------------------------------->
     <h2><code>&ltIframe&gt</code></h2>
@@ -162,19 +162,23 @@
     </a>
     <!---------------------------------------------------------------------------------->
     <h2><code>background-image</code></h2>
-    <ul style="background-image: url('./Vídeos-Imagens-Áudios/imagem0.jpg')";>
+    <ul style="background-image: url('./Videos-Imagens-Audios/imagem0.jpg')";>
         <li>com a tag <code style="color:darkred;">style</code></li>
         <li>somente para estilo</li>
         <li>não é semântico e falta significado</li>
     </ul>
     <!---------------------------------------------------------------------------------->
-    <h2><code>&ltfigure&gt e &ltfigcaption&gt</code></h2>
-    <p>São usados para criar títulos vísivei para as imagens de forma semântica </p>
+    <h2><code>&ltfigure&gt</code> e <code>&ltfigcaption&gt</code></h2>
+    <p>São usados para criar títulos vísiveis para as imagens de forma semântica </p>
 
     <figure>
         <a href="https://store.steampowered.com" target="_blank">
-            <img src="https://source.unsplash.com/random" alt="Era pra ter uma imagem aqui" title="Imagem aleatória"
-                width="400px">
+            <img 
+                src="https://source.unsplash.com/random" 
+                alt="Era pra ter uma imagem aqui" 
+                title="Imagem aleatória"
+                width="400px"
+            >
             <figcaption>Imagem aleatória</figcaption>
         </a>
     </figure>
